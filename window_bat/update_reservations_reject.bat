@@ -28,7 +28,7 @@ echo.
 rem SQL 쿼리를 실행하여 예약 상태를 업데이트합니다.
 echo SQL 쿼리를 실행합니다...
 set PGPASSWORD=%DB_PASSWORD%
-%PG_BIN%\psql.exe -h %DB_IP% -U %DB_USER% -d %DB_NAME% -v ON_ERROR_STOP=1 -c "SET client_encoding TO 'UTF8';" -f %BATCH_DIR%\%SQL_NAME%
+%PG_BIN%\psql.exe -h %DB_IP% -U %DB_USER% -d %DB_NAME% -v ON_ERROR_STOP=1 -c "SET client_encoding TO 'UTF8';" -f %BATCH_DIR%\%REJECT_SQL_NAME%
 
 if errorlevel 1 (
     echo.
